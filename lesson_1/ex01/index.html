@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">String</label>
+    <input type="text"  id="str">
+    <br>
+    <label for="">Number</label>
+    <input type="text" id="number">
+    <br>
+    <input type="button" id="btn" value="stts" >
+    <script src="main.js" >
+        var str=document.querySelector("#str").value;
+        var num=document.querySelector("#number").value;
+        var btn = document.querySelector("#btn").value;
+        btn.addEventListener("click",function(){
+            if(str.length<=num){
+                console.log(str+".")
+            }else{
+                var newstr= str.slice(0,num);
+                console.log(newstr+"...")
+            }})
+    </script>
+</body>
+</html>

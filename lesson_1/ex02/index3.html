@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var taiKhoan={
+             maTaiKhoan:"0010",
+             tenTaiKhoan:"Nguyễn Huy Hoàng",
+             soDu:1000000,
+             soNo:2000000,
+             layDuNo:function(a=100,b=200){
+                console.log(this.soDu-a-this.soNo-b);
+
+             }
+        }
+        console.log(taiKhoan.layDuNo());
+
+        var sinhVien={
+            ma_sinh_vien:"ph18783",
+            ho_va_ten:"Nguyễn Huy Hoàng",
+            lop:"we17202",
+            ngay_nhap_hoc:"05/09/2020",
+            diem_trung_binh:8.5,
+            tinhHocLuc:function(){
+                if(this.diem_trung_binh>10 && this.diem_trung_binh<0){
+                     return ("diem khong hop le");
+                }else if(this.diem_trung_binh<5){
+                    return ("yếu");
+                }else if(this.diem_trung_binh<7){
+                    return ("Trung Bình");
+                }else if(this.diem_trung_binh<8){
+                    return ("Khá");
+                }else{
+                    return ("Giỏi");
+                }
+            },
+            thoiGianRaTruong:function(){
+                this.ngay_nhap_hoc.split("/");
+                return this.ngay_nhap_hoc[2]+18;
+            }
+        }
+        console.log(sinhVien.thoiGianRaTruong());
+    </script>
+</body>
+</html>
